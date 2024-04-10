@@ -29,9 +29,13 @@ steps:
 
 - script: './node_modules/.bin/node-sass $(wwwrootDir) --output $(wwwrootDir)'
   displayName: 'Compile Sass assets'
-- script: 'echo $(Build.ArtifactStagingDirectory)'
-- script: 'echo $(Build.BuildId)'
-- script: 'echo $(Build.Repository.LocalPath)'
+#- script: 'echo $(Build.ArtifactStagingDirectory)'
+#- script: 'echo $(Build.BuildId)'
+- script: 
+    mkdir $(Build.Repository.LocalPath)/test
+    cd $(Build.Repository.LocalPath)/test
+    echo file.txt
+    ls
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
