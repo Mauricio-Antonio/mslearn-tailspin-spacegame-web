@@ -32,7 +32,7 @@ steps:
 #- script: 'echo $(Build.ArtifactStagingDirectory)'
 #- script: 'echo $(Build.BuildId)'
 - script: 
-    mkdir $(Build.Repository.LocalPath)/test
+#    mkdir $(Build.Repository.LocalPath)/test
     cd $(Build.Repository.LocalPath)/test
     echo file.txt
     ls
