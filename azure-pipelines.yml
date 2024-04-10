@@ -31,6 +31,7 @@ steps:
   displayName: 'Compile Sass assets'
 - script: 'echo $(Build.ArtifactStagingDirectory)'
 - script: 'echo $(Build.BuildId)'
+- script: 'echo $(Build.Repository.LocalPath)'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
