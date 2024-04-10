@@ -34,7 +34,7 @@ steps:
 - script: |
     mkdir -p $(Build.Repository.LocalPath)/test
     cd $(Build.Repository.LocalPath)/test
-    ls $(Build.Repository.LocalPath)
+    ls -ll $(Build.Repository.LocalPath)
     echo file.txt
     ls
   displayName: 'Playing w/ temp folder in agent'
