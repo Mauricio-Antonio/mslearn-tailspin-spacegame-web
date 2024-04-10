@@ -31,11 +31,11 @@ steps:
   displayName: 'Compile Sass assets'
 #- script: 'echo $(Build.ArtifactStagingDirectory)'
 #- script: 'echo $(Build.BuildId)'
-- script: 
-#    mkdir $(Build.Repository.LocalPath)/test
+- script: |
     cd $(Build.Repository.LocalPath)/test
     echo file.txt
     ls
+  displayName: 'Playing w/ temp folder in agent'
 
 - task: gulp@1
   displayName: 'Run gulp tasks'
